@@ -3,13 +3,13 @@ import Image from 'next/image'
 import styles from '@/styles/Home.module.css'
 
 export function Headline(props) {
-    console.log(props.title);
   return (
     <div>
           <p>
             Get started by editing&nbsp;
-            <code className={styles.code}>{props.title}</code>
+            {props.children}
           </p>
+          
           <div>
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -27,6 +27,7 @@ export function Headline(props) {
               />
             </a>
           </div>
+          <button onClick={props.onClick}>ボタン</button>
     </div>
   )
 }
