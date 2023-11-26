@@ -1,0 +1,7 @@
+/* Tablet and Smaller Desktop */
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+}

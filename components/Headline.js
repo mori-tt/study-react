@@ -1,6 +1,6 @@
 // import React from "react";
 import Image from 'next/image'
-import styles from '@/styles/Home.module.css'
+import classes from './Headline.module.css'
 
 export function Headline(props) {
   return (
@@ -20,7 +20,7 @@ export function Headline(props) {
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"
-                className={styles.vercelLogo}
+                className={classes.vercelLogo}
                 width={100}
                 height={24}
                 priority
