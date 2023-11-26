@@ -10,10 +10,10 @@ export function Links() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2>
+          <h2 className={classes.title}>
             Docs <span>-&gt;</span>
           </h2>
-          <p>Find in-depth information about Next.js features and&nbsp;API.</p>
+          <p className={classes.desctiption}>Find in-depth information about Next.js features and&nbsp;API.</p>
         </a>
 
         <a
@@ -22,10 +22,10 @@ export function Links() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2>
+          <h2 className={classes.title}>
             Learn <span>-&gt;</span>
           </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
+          <p className={classes.desctiption}>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
         </a>
 
         <a
@@ -34,10 +34,10 @@ export function Links() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2>
+          <h2 className={classes.title}>
             Templates <span>-&gt;</span>
           </h2>
-          <p>Discover and deploy boilerplate example Next.js&nbsp;projects.</p>
+          <p className={classes.desctiption}>Discover and deploy boilerplate example Next.js&nbsp;projects.</p>
         </a>
 
         <a
@@ -46,10 +46,10 @@ export function Links() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h2>
+          <h2 className={classes.title}>
             Deploy <span>-&gt;</span>
           </h2>
-          <p>
+          <p className={classes.desctiption}>
             Instantly deploy your Next.js site to a shareable URL
             with&nbsp;Vercel.
           </p>
