@@ -3,10 +3,20 @@ import { Inter } from "next/font/google";
 import classes from "src/components/Main/Main.module.css";
 import { Headline } from "src/components/Headline";
 import { Links } from "@/src/components/Links";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export function Main(props) {
+    // useEffect(() => {
+    //   console.log("マウント時");
+    //   document.body.style.backgroundColor = "lightblue";
+
+    //   return () => {
+    //     console.log("アンマウント時");
+    //     document.body.style.backgroundColor = "";
+    //   };
+    // }, []);
   return (
     <main className={`${classes.main} ${inter.className}`}>
       <div className={classes.description}>
