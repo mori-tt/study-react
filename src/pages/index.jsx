@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,23 +10,18 @@ export default function Home() {
 
   const [count, setCount] = useState(1);
 
-  // let foo = 1;
-
-  const handleClick = (e) => {
+  const handleClick = useCallback(() => {
+    if (count < 10) {
     setCount((count) => count + 1);
-    setCount((count) => count + 1);
-    // foo = foo + 1;
-  };
+    }
+  }, [count]);
 
   useEffect(()=>{
     document.body.style.backgroundColor = "lightblue"
-
     return () => {
       document.body.style.backgroundColor = "";
     }
-  }, []);
-
-  // console.log(count);
+  }, [count]);
 
   return (
     <>
