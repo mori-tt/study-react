@@ -10,6 +10,7 @@ export default function Home() {
   const [count, setCount] = useState(1);
   const [text, setText] = useState("");
   const [isShow, setIsShow] = useState(true);
+  const [array, setArray] = useState([]);
 
   const handleClick = useCallback(() => {
     if (count < 10) {
@@ -24,10 +25,20 @@ export default function Home() {
   const handleChange = useCallback((e) => {
     if (e.target.value.length > 5) {
       alert("5文字以内にしてください");
-      return;
+      return prevArray;
     }
     setText(e.target.value.trim());
   }, []);
+
+  const handleAdd = useCallback(() => {
+    setArray((prevArray) => {
+      if (prevArray.some((item) => item === text)) {
+        alert("同じ要素が既に存在します。");
+        return prevArray;
+      }
+      return [...prevArray, text];
+    });
+  }, [text]);
 
   useEffect(() => {
     document.body.style.backgroundColor = "lightblue";
@@ -50,6 +61,12 @@ export default function Home() {
         {isShow ? "非表示" : "表示"}
       </button>
       <input type="text" value={text} onChange={handleChange} />
+      <button onClick={handleAdd}>追加</button>
+      <ul>
+        {array.map((item) => {
+          return <li key={item}>{item}</li>;
+        })}
+      </ul>
       <Main page="index" />
     </>
   );
