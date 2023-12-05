@@ -9,11 +9,17 @@ import { useBgLigntBlue } from "@/src/hooks/useBgLigntBlue";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-
-  useBgLigntBlue();
+export default function Home(props) {
+  const {
+    count,
+    isShow,
+    handleClick,
+    handleDisplay,
+    text,
+    array,
+    handleChange,
+    handleAdd,
+  } = props;
 
   return (
     <>
