@@ -2,7 +2,7 @@
 import Image from "next/image";
 import classes from "src/components/Headline/Headline.module.css";
 
-export function Headline(props) {
+export const Headline = (props) => {
   return (
     <div>
       <p>アイテムの数は{props.children}個です</p>
@@ -28,4 +28,4 @@ export function Headline(props) {
       <button onClick={props.onClick}>ボタン</button>
     </div>
   );
-}
+};
