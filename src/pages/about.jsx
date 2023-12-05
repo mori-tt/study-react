@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function About({
   count,
+  doubleCount,
   isShow,
   handleClick,
   handleDisplay,
@@ -22,7 +23,7 @@ export default function About({
       </Head>
       <Header />
 
-      {isShow ? <h1>{count}</h1> : null}
+      {isShow ? <h1>{doubleCount}</h1> : null}
       <button href="/about" onClick={handleClick}>
         ボタン
       </button>
